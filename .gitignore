@@ -1,0 +1,11 @@
+# Erlang
+
+.erlang.mk
+_rel
+ebin/*.beam
+deps
+erl_crash.dump
+
+# GNU Emacs
+
+*~
