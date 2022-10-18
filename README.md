@@ -49,19 +49,22 @@ Register new user with data in JSON format:
 - `name`: real user name.
 - `password`: password used for log in server.
 
-### `POST /users/ID/login`:
+### `POST /users/ID/session`:
 
 Log in user with his ID and password passed in request body.
 The user is assigned a session ID.
 
-### `POST /users/ID/logout`:
+### `DELETE /users/ID/session`:
 
-Log out user with his ID.
-Also used session ID and session is being cleared.
+Log out user with his ID. Need used session ID.
+User session is being cleared.
 
 ### `PATCH /users/ID/password`:
 
-Change password for user with ID.
-Also used session ID.
+Change password for user with ID. Need used session ID.
+
+### `DELETE /users/ID`:
+
+Remove user data with ID. Need user session ID.
 
 (c) Evgeny Simonenko, 2022
