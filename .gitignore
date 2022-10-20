@@ -3,7 +3,10 @@
 .erlang.mk
 _rel
 ebin/*.beam
+ebin/test
 deps
+logs
+test/*.beam
 erl_crash.dump
 
 # GNU Emacs

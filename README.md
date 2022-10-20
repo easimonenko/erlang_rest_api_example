@@ -18,10 +18,18 @@ make run
 
 Open in browser URL <http://localhost:8080>.
 
+- Testing:
+
+``` shell
+make tests
+```
+
 ## Internals
 
 For building of project and manage of its dependencies is used
 [erlang.mk](https://erlang.mk/).
+
+For testing of REST API is used _Common Test_ and standard _httpc_ module.
 
 ## API description
 
