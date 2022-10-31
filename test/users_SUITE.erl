@@ -7,9 +7,12 @@
 -export([users_delete/1]).
 
 init_per_suite(Config) ->
-    inets:start(), Config.
+    ok = inets:start(),
+    application:start(erlang_rest_api_example),
+    Config.
 
 end_per_suite(_Config) ->
+    application:stop(erlang_rest_api_example),
     inets:stop().
 
 all() ->

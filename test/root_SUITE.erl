@@ -3,10 +3,13 @@
 -export([root_handler/1]).
 
 init_per_suite(Config) ->
-    inets:start(), Config.
+    ok = inets:start(),
+    {ok, _} = application:ensure_all_started(erlang_rest_api_example),
+    Config.
 
 end_per_suite(_Config) ->
-    inets:stop().
+    ok = application:stop(erlang_rest_api_example),
+    ok = inets:stop().
 
 all() ->
     [root_handler].
