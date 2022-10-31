@@ -33,7 +33,7 @@ For testing of REST API is used _Common Test_ and standard _httpc_ module.
 
 ## API description
 
-### `GET /users`
+### `GET /api/users`
 
 Get list of users. Returns JSON array with users data. Users date includes:
 
@@ -41,15 +41,15 @@ Get list of users. Returns JSON array with users data. Users date includes:
 - `email`: user email.
 - `name`: real user name.
 
-### `GET /users?email=EMAIL`
+### `GET /api/users?email=EMAIL`
 
 Find user by email. Returns user data.
 
-### `GET /users/ID`
+### `GET /api/users/ID`
 
 Get user data by his identifier.
 
-### `POST /users`
+### `POST /api/users`
 
 Register new user with data in JSON format:
 
@@ -57,21 +57,21 @@ Register new user with data in JSON format:
 - `name`: real user name.
 - `password`: password used for log in server.
 
-### `POST /users/ID/session`:
+### `POST /api/users/ID/session`:
 
 Log in user with his ID and password passed in request body.
 The user is assigned a session ID.
 
-### `DELETE /users/ID/session`:
+### `DELETE /api/users/ID/session`:
 
 Log out user with his ID. Need used session ID.
 User session is being cleared.
 
-### `PATCH /users/ID/password`:
+### `PATCH /api/users/ID/password`:
 
 Change password for user with ID. Need used session ID.
 
-### `DELETE /users/ID`:
+### `DELETE /api/users/ID`:
 
 Remove user data with ID. Need user session ID.
 
