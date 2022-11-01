@@ -1,5 +1,4 @@
 -module(root_handler).
--behavior(cowboy_handler).
 
 -export([init/2]).
 
