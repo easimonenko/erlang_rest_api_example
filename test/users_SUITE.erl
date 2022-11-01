@@ -8,7 +8,7 @@
 
 init_per_suite(Config) ->
     ok = inets:start(),
-    application:start(erlang_rest_api_example),
+    {ok, _} = application:ensure_all_started(erlang_rest_api_example),
     Config.
 
 end_per_suite(_Config) ->

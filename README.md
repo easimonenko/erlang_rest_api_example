@@ -18,10 +18,16 @@ make run
 
 Open in browser URL <http://localhost:8080>.
 
-- Testing:
+- Testing (all suites):
 
 ``` shell
 make tests
+```
+
+- Testing API users:
+
+``` shell
+make ct-users
 ```
 
 ## Internals
